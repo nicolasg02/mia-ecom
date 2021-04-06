@@ -13,37 +13,32 @@
 
   <!-- custom css -->
   <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
+  <title>MIA Pizza</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#inicio">MIA</a>
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navItemsCustom">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#quienesSomos">Quienes Somos</a>
+        <ul id="myMenu" class="navbar-nav me-auto mb-2 mb-lg-0 navItemsCustom">
+          <li data-menuanchor="inicio" class="nav-item d-none active">
+            <a href="#inicio" class="nav-link"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pedido">Pedido</a>
+          <li data-menuanchor="quienesSomos" class="nav-item">
+            <a href="#quienesSomos" class="nav-link"><span class="ifactive">Quienes Somos</span></a>
           </li>
-          <li class="nav-item">
-            <a href="#historia" class="nav-link">Historia</a>
+          <li data-menuanchor="pedido" class="nav-item">
+            <a href="#pedido" class="nav-link"><span class="ifactive">Pedido</span></a>
           </li>
-          <li class="nav-item">
-            <a href="#galeria" class="nav-link">Galeria</a>
+          <li data-menuanchor="historia" class="nav-item">
+            <a href="#historia" class="nav-link"><span class="ifactive">Historia</span></a>
+          </li>
+          <li data-menuanchor="galeria" class="nav-item">
+            <a href="#galeria" class="nav-link"><span class="ifactive">Galeria</span></a>
           </li>
         </ul>
       </div>
-        <!-- <button class="btn btn-outline-success me-2">WhatsApp</button> -->
         <a class="btn btn-outline-success me-2" href="https://wa.me/50685502286?text=Quisiera%20hacer%20un%20pedido.%20" target="_blank">WhatsApp</a>
-        <!-- <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
     </div>
   </nav>
 
@@ -53,7 +48,6 @@
     <div class="section section3Custom">Sección 3</div>
     <div class="section section4Custom">Sección 4</div>
     <div class="section section5Custom">Seccion 5</div>
-    <div class="section fp-auto-height section6Custom">Seccion 6</div>
   </div>  
 
   <!-- scripts -->

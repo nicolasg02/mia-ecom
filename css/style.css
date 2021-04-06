@@ -1,14 +1,13 @@
-.section1Custom {
-  background-color: #eee;
-}
-
-.section2Custom {
-  background-color: brown;
-}
-
-
 @media (max-width: 992px) {
   .navItemsCustom {
     margin-bottom: 0 !important;
   }
+}
+
+.fp-tooltip {
+  color: #222 !important;
+}
+
+li.active span.ifactive {
+  color: #ffffff !important;
 }
