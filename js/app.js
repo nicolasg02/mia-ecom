@@ -10,8 +10,9 @@ const myFullpage = new fullpage('#fullpage', {
   loopBottom: false,
   // * navegacion
   navigation: true,
+  verticalCentered: false,
   menu: '#myMenu',
   anchors: ['inicio', 'quienesSomos', 'pedido', 'historia', 'galeria'],
   navigationTooltips: ['Inicio', 'Quienes Somos', 'Hace tu pedido', 'Historia', 'Galeria'],
-  showActiveTooltip: true,
+  showActiveTooltip: false,
 });
