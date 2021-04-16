@@ -1,0 +1,88 @@
+/* IPHONE 5 ROTATED - 320PX - 568PX */
+@media (min-width: 568px) and (min-height: 320px) {
+  .titulo {
+    font-size: calc(1rem + .9vw);
+    margin-top: 40px;
+  }
+
+  .logoImg {
+    height: 8rem;
+    width: auto;
+  }
+
+  .socials {
+    display: flex;
+    font-size: 0.8rem;
+    margin-top: 10px; align-items: center;
+  }
+
+  .socialMiddle {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: center;
+  }
+}
+
+/* IPHONE 6S / 7 PLUS ROTATED - 736 X 414  */
+@media (min-width: 736px) and (min-height: 414px) {
+  .titulo {
+    font-size: calc(1.4rem + .9vw);
+  }
+
+  .logoImg {
+    height: 9rem;
+    width: auto;
+  }
+
+  .socials {
+    margin-top: 2rem;
+  }
+}
+
+
+@media (min-width: 414px) {
+  .titulo {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .logoImg {
+    height: 13rem;
+    width: auto;
+  }
+}
+
+@media (min-width: 480px) {
+  .titulo {
+    font-size: calc(2rem + .9vw);
+  }
+
+  .logoImg {
+    height: 16rem;
+  }
+}
+
+
+/* DESKTOP 1366 - 768 (Bootstrap md) */
+@media (min-width: 768px) {
+  .logoImg {
+    height: 24rem;
+    width: auto;
+  }
+
+  .socials {
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .logoImg {
+    height: 28rem;
+    width: auto;
+  }
+
+  .socials {
+    font-size: 1.2rem;
+  }
+}

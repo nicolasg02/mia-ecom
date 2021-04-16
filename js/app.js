@@ -1,18 +1,15 @@
-const myFullpage = new fullpage('#fullpage', {
-  // options
-  css3: true,
-  autoScrolling: true,
-  fitToScreen: false,
-  fitToSectionDelay: 300,
-  easing: 'easeInOutCubic',
-  scrollingSpeed: 700,
-  easingcss3: 'ease-out',
-  loopBottom: false,
-  // * navegacion
+new fullpage('#fullpage', {
+	// global
+  licenseKey: null,
+	autoScrolling:true,
+	scrollHorizontally: true,
+  scrollBar: false,
+  // navigation
   navigation: true,
-  verticalCentered: false,
   menu: '#myMenu',
   anchors: ['inicio', 'quienesSomos', 'pedido', 'historia', 'galeria'],
-  navigationTooltips: ['Inicio', 'Quienes Somos', 'Hace tu pedido', 'Historia', 'Galeria'],
-  showActiveTooltip: false,
+  navigationTooltips: ['Inicio', 'Quiénes somos', 'Hacé tu pedido', 'Historia', 'Galería']
 });
+
+//métodos
+// fullpage_api.setAllowScrolling(false);

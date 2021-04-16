@@ -4,83 +4,102 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  
-  <!-- fullpage-js -->
+  <!-- fullpagejs -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css" integrity="sha512-hGBKkjAVJUXoImyDezOKpzuY4LS1eTvJ4HTC/pbxn47x5zNzGA1vi3vFQhhOehWLTNHdn+2Yqh/IRNPw/8JF/A==" crossorigin="anonymous" />
 
+  <!-- bootstrap5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   
   <!-- custom css -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media_queries.css">
   <title>MIA Pizza</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <!-- page content -->
+  <div id="fullpage">
+    <div class="section">
+
+      <div class="inicioWrapper d-flex flex-column">
+        <h2 class="titulo fw-lighter text-center">
+          El verdadero sabor de la pizza..
+        </h2>
+
+        <img class="logoImg" src="assets/newlogo.jpg" alt="logo">
+
+        <ul class="socials list-unstyled">
+          <li>
+            <a class="text-decoration-none" href="https://www.instagram.com/" style="color: #000;">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </li>
+          <li class="my-2 mx-md-5 socialMiddle">
+            <a class="text-decoration-none" href="https://www.facebook.com/" style="color: #000;">
+              <i class="fab fa-facebook-square"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a class="text-decoration-none" href="https://www.tiktok.com/" style="color: #000;">
+              <i class="fab fa-tiktok"></i> TikTok
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="section">
+      Seccion 2
+    </div>
+    <div class="section">Sección 3</div>
+    <div class="section">Sección 4</div>
+    <div class="section">Sección 5</div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-light pt-md-4">
     <div class="container">
       <a class="navbar-brand" href="#inicio">MIA</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul id="myMenu" class="navbar-nav me-auto mb-2 mb-lg-0 navItemsCustom">
+      <div class="collapse navbar-collapse">
+        <ul id="myMenu" class="navbar-nav me-auto mb-0">
           <li data-menuanchor="inicio" class="nav-item d-none active">
             <a href="#inicio" class="nav-link"></a>
           </li>
           <li data-menuanchor="quienesSomos" class="nav-item">
-            <a href="#quienesSomos" class="nav-link"><span class="ifactive">Quienes Somos</span></a>
+            <a class="nav-link" href="#quienesSomos">
+              <span class="ifactive">Quiénes Somos</span>
+            </a>
           </li>
           <li data-menuanchor="pedido" class="nav-item">
-            <a href="#pedido" class="nav-link"><span class="ifactive">Pedido</span></a>
+            <a class="nav-link" href="#pedido">
+              <span class="ifactive">Hacé tu pedido</span>
+            </a>
           </li>
           <li data-menuanchor="historia" class="nav-item">
-            <a href="#historia" class="nav-link"><span class="ifactive">Historia</span></a>
+            <a class="nav-link" href="#historia">
+              <span class="ifactive">Historia</span>
+            </a>
           </li>
           <li data-menuanchor="galeria" class="nav-item">
-            <a href="#galeria" class="nav-link"><span class="ifactive">Galeria</span></a>
+            <a class="nav-link" href="#galeria">
+              <span class="ifactive">Galería</span>
+            </a>
           </li>
         </ul>
       </div>
-        <a class="btn btn-outline-light me-2" href="https://wa.me/50685502286?text=Quisiera%20hacer%20un%20pedido.%20" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a class="btn whatsapp-btn" href="#">
+        <i class="bi bi-whatsapp"></i> WhatsApp
+      </a>
     </div>
   </nav>
 
-  <div id="fullpage">
-    <div class="container">
-      <div class="section section1">
-        <img class="d-block mx-auto pt-5 img-fluid logoS1" src="assets/logo.svg" alt="logo">
-        <ul class="socialsLinks list-unstyled text-center mt-5">
-          <li>
-            <a class="socials" target="_blank" href="https://www.instagram.com">
-              <i class="fab fa-instagram"></i>
-              Instagram
-            </a>
-          </li>
-          <li class="my-4 my-md-0 mx-md-5">
-            <a class="socials" target="_blank" href="https://www.facebook.com">
-              <i class="fab fa-facebook-square"></i>
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a class="socials" target="_blank" href="https://www.tiktok.com">
-              <i class="fab fa-tiktok"></i>
-              TikTok
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="section section2">Seccion 2</div>
-      <div class="section section3">Seccion 3</div>
-      <div class="section section4">Sección 4</div>
-      <div class="section section5">Seccion 5</div>
-    </div>
-  </div>  
-
   <!-- scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/vendors/scrolloverflow.min.js" integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.js" integrity="sha512-XnvEFIQIK4NvMki+6FYKTM7XdnsbDAqHB2KLXfgFkafRQBtKOkLZQYjf7ydXd8OfrAn8vWS68ESil4GHtpdqPQ==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/c0ed7640f7.js" crossorigin="anonymous"></script>
-  <script src="./js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
