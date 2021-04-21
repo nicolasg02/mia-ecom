@@ -1,15 +1,9 @@
-new fullpage('#fullpage', {
-	// global
-  licenseKey: null,
-	autoScrolling:true,
-	scrollHorizontally: true,
-  scrollBar: false,
-  // navigation
-  navigation: true,
-  menu: '#myMenu',
-  anchors: ['inicio', 'quienesSomos', 'pedido', 'historia', 'galeria'],
-  navigationTooltips: ['Inicio', 'Quiénes somos', 'Hacé tu pedido', 'Historia', 'Galería']
-});
+let pedidoDesktop = document.querySelector('.pedido-desktop');
+let pedidoMobile = document.querySelector('.pedido-mobile');
 
-//métodos
-// fullpage_api.setAllowScrolling(false);
+// pedidos desktop/mobile
+if (window.innerWidth <= 992) {
+  pedidoDesktop.classList.add('d-none');
+} else {
+  pedidoMobile.classList.add('d-none');
+}
