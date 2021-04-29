@@ -1,15 +1,18 @@
 new fullpage('#fullpage', {
-  licenseKey: null,
-	autoScrolling:true,
+	licenseKey: null,
+	autoScrolling: true,
+	fitToSection: false,
   // navigation
   navigation: true,
   menu: '#myMenu',
-  anchors: ['inicio', 'quienes-somos', 'pedido', 'historia', 'galeria'],
-  navigationTooltips: ['Inicio', 'Quiénes somos', 'Hacé tu pedido', 'Historia', 'Galería', 'Más Información']
+  anchors: ['inicio', 'quienes-somos', 'pedido', 'objetivo', 'galeria', 'mas-info'],
+  navigationTooltips: ['Inicio', 'Quiénes somos', 'Hacé tu pedido', 'Nuestro objetivo', 'Galería', 'Más Información']
 });
 
-// desactivar fullpagejs en pantallas pequeñas
-if (window.innerWidth <= 768) {
-	fullpage_api.setAutoScrolling(false);
-	fullpage_api.setFitToSection(false);
+//methods
+fullpage_api.setAutoScrolling(false);
+
+
+if (window.innerWidth >= 1200) {
+	fullpage_api.setAutoScrolling(true);
 }

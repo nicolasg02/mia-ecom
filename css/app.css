@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.fp-tooltip {
+  font-size: 13px !important;
+  color: #222 !important;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0 5px;
+  border: 1px solid #000;
+}
+
+/* navbar */
+nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+  box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.62);
+-webkit-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.62);
+-moz-box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.62);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #fff;
+}
+
+li.active span.ifactive {
+  color: #fff !important;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background-color: #222;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #fff;
+}
+
+
+/* inicio */
+
+
+.inicio-logo {
+  width: 220px;
+  height: 270px;
+}
+
+.mobile-card {
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 12px !important;
+  box-shadow: 0px 0px 14px 6px rgba(0,0,0,0.55);
+-webkit-box-shadow: 0px 0px 14px 6px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 0px 14px 6px rgba(0,0,0,0.55);
+}
+
+
+hr {
+  margin: 0 30px;
+  color: #000;
+  height: 3px !important;
+  opacity: 1;
+  box-shadow: -1px 24px 57px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 24px 57px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 24px 57px 2px rgba(0,0,0,0.75);
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+@media (max-height: 590px) {
+  .nav-reserved {
+    height: 70px !important;
+  }
+}
+
+
+.gallery-card {
+  border-radius: 12px !important;
+  box-shadow: 0px 0px 14px 6px rgba(0,0,0,0.55);
+-webkit-box-shadow: 0px 0px 14px 6px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 0px 14px 6px rgba(0,0,0,0.55);
+}
+
+.gallery-img {
+  border-radius: 12px !important;
+}
+
+.gallery-img:hover {
+  cursor: pointer;
+}
+
+.mobile-card .card-img-top {
+  border-top-right-radius: 12px !important;
+  border-top-left-radius: 12px !important;
+}
+
+.img-somos {
+  border-radius: 12px !important;
+}
+
+.modal-content {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+.btn-close {
+  background-color: #fff !important;
+}
+
+.modal-header {
+  border: 0 !important;
+}
+
