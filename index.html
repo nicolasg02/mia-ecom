@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,20 +20,104 @@
   <title>MIA Pizza</title>
 </head>
 <body>
-  <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="assets/gallery/g1.jpg" class="card-img-top" alt="...">
+
+  <!-- Pedido Modal -->
+  <div 
+  class="modal fade pedidoModal" 
+  id="pedidoModal" 
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1" 
+  aria-labelledby="pedidoModalLabel" 
+  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl modal-fullscreen-lg-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pedidoModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <h1 class="display-5 fw-lighter">Te enviamos tu pedido a domicilio!</h1>
+            <form class="modal-form">
+              <div class="row g-3">
+                <div class="col-md-6 mb-2">
+                  <label for="inputNombre" class="form-label mb-0">Nombre y Apellido</label>
+                  <input type="text" class="form-control" id="inputNombre" placeholder="Ingresá tu nombre y apellido" aria-label="Nombre y apellido">
+                </div>
+                <div class="col-md-6 mb-2">
+                  <label for="inputDireccion" class="form-label mb-0">Dirección</label>
+                  <input type="text" class="form-control" id="inputDireccion" placeholder="Ingresá la calle y numero">
+                </div>
+                <div class="col-md-5 mb-2">
+                  <label for="inputPartido" class="form-label mb-0">Partido</label>
+                  <select id="inputPartido" class="form-select" onchange="costoEnvio()">
+                    <option selected>Seleccionar</option>
+                    <option>Avellaneda</option>
+                    <option>Quilmes</option>
+                    <option>Lanus</option>
+                    <option>Lomas de Zamora</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-2">
+                  <label for="inputLocalidad" class="form-label mb-0">Localidad</label>
+                  <input type="text" class="form-control" id="inputLocalidad" placeholder="Ingresá localidad o barrio">
+                </div>
+                <div class="col-md-3 mb-2">
+                  <label for="inputCP" class="form-label mb-0">Código Postal</label>
+                  <input type="text" class="form-control" id="inputCP" placeholder="CP">
+                </div>
+                <div class="col-12 mb-4">
+                  <label for="inputNotas" class="form-label mb-0">Notas</label>
+                  <textarea class="form-control" id="inputNotas" rows="3" placeholder="Podés dejarnos un comentario especificando tu orden"></textarea>
+                </div>
+              </div>
+
+              <div class="card orden-card my-2">
+                <div class="card-header text-muted">
+                  Tu orden:
+                </div>
+                <ul id="orden-ul" class="list-group list-group-flush">
+                  <!-- <li class="list-group-item">
+                    Pizza Mozzarella
+                    <span class="ms-2 badge bg-dark rounded-pill">x2</span>
+                  </li> -->
+                </ul>
+                <div class="card-footer text-end">
+                  Total: $ <span class="displayTotal"></span>
+                </div>
+              </div>
+    
+              <div class="alert alert-success mb-2" role="alert">
+                <li>Vas a ser redirigido a WhatsApp con tu orden y datos que especificaste, solo tenés que enviar el mensaje!</li>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success d-inline-block w-100" data-bs-toggle="modal" data-bs-target="#confirmarModal">
+            Confirmar pedido
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <!-- Gallery Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button id="closeModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/gallery/g1.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#inicio">
@@ -76,7 +161,8 @@
 
   <div class="d-flex nav-reserved"></div>
 
-  <div id="fullpage">
+  <div id="fullpage" class="main-page">
+    <!-- Inicio -->
     <section class="section">
       <img class="inicio-logo mx-auto d-block mb-5" src="assets/logo-black.png" alt="logo">
       <ul class="list-unstyled mx-auto d-block d-md-flex justify-content-center text-center fs-5 mt-5">
@@ -100,6 +186,7 @@
 
     <hr class="my-5">
 
+    <!-- Quienes somos -->
     <section class="section">
       <div class="container">
         <h6 class="fw-bolder">Quiénes somos</h6>
@@ -112,6 +199,7 @@
 
     <hr class="my-5">
 
+    <!-- Hace tu pedido -->
     <section class="section">
       <div class="container">
         <h6 class="fw-bolder mt-xl-5">Hacé tu pedido</h6>
@@ -125,13 +213,13 @@
                 <p class="card-text">La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda ('pizza redonda').</p>
               </div>
               <div class="card-footer mb-2">
-                <select id="Napolitana" class="form-select" aria-label="Default select example">
+                <select id="Napolitana" class="form-select" aria-label="Default select example" onchange="updatePizzaButton(document.querySelector('#pizza1'))">
                   <option selected>Elegí cuantas llevar:</option>
                   <option value="1">1 (Una unidad)</option>
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button class="btn btn-success w-100 mt-2" onclick="updateItem(Napolitana)">
+                <button id="pizza1" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Napolitana)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
@@ -146,13 +234,13 @@
                 <p class="card-text">La pizza de mozzarella es la más clásica entre todas las recetas de pizzas. Es la que nos gusta a la mayoría. Es una receta compuesta por una masa baja y crocante con una cubierta de salsa de tomate, mozzarella, aceitunas y orégano.</p>
               </div>
               <div class="card-footer mb-2">
-                <select id="Mozzarella" class="form-select" aria-label="Default select example">
+                <select id="Mozzarella" class="form-select" aria-label="Default select example" onchange="updatePizzaButton(document.querySelector('#pizza2'))">
                   <option selected>Elegí cuantas llevar:</option>
                   <option value="1">1 (Una unidad)</option>
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button class="btn btn-success w-100 mt-2" onclick="updateItem(Mozzarella)">
+                <button id="pizza2" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Mozzarella)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
@@ -167,13 +255,13 @@
                 <p class="card-text">La pizza es uno de los platos más famosos en el mundo, y cómo no, su sabor enamora hasta al más fuerte. La versión calabresa, caracterizada por la longaniza y las aceitunas forman una genial combinación para la conocida receta.</p>
               </div>
               <div class="card-footer mb-2">
-                <select id="Calabresa" class="form-select" aria-label="Default select example">
+                <select id="Calabresa" class="form-select" aria-label="Default select example" onchange="updatePizzaButton(document.querySelector('#pizza3'))">
                   <option selected>Elegí cuantas llevar:</option>
                   <option value="1">1 (Una unidad)</option>
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button class="btn btn-success w-100 mt-2" onclick="updateItem(Calabresa)">
+                <button id="pizza3" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Calabresa)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
@@ -188,13 +276,13 @@
                 <p class="card-text">Pepperoni is an American variety of salami, made from cured pork and beef seasoned with paprika or other chili pepper. Pepperoni is characteristically soft, slightly smoky, and bright red in color. </p>
               </div>
               <div class="card-footer mb-2">
-                <select id="Pepperoni" class="form-select" aria-label="Default select example">
+                <select id="Pepperoni" class="form-select" aria-label="Default select example" onchange="updatePizzaButton(document.querySelector('#pizza4'))">
                   <option selected>Elegí cuantas llevar:</option>
                   <option value="1">1 (Una unidad)</option>
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button class="btn btn-success w-100 mt-2" onclick="updateItem(Pepperoni)">
+                <button id="pizza4" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Pepperoni)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
@@ -202,10 +290,16 @@
           </div>
         </div>
 
-        <div class="mobile-card card mt-3 mt-md-3">
+        <div class="before-total-card mobile-card card mt-3 mt-md-3">
+          <div class="total-boton card-body d-flex justify-content-center px-md-5">
+            <p class="mb-0 align-self-center fs-4 fw-lighter">Hace tu orden</p>
+          </div>
+        </div>
+
+        <div class="total-card mobile-card card mt-3 mt-md-3 d-none">
           <div class="total-boton card-body d-flex justify-content-between px-md-5">
             <p class="mb-0 align-self-center fs-4">TOTAL: $ <span id="costoTotal"></span></p>
-            <button id="submitPedidos" class="btn btn-success">
+            <button id="submitPedido" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#pedidoModal">
               <i class="bi bi-cart-check"></i> Ir al carrito
             </button>
           </div>
@@ -215,6 +309,7 @@
 
     <hr class="mt-5 mb-3">
 
+    <!-- Nuestro objetivo -->
     <section class="section">
       <div class="container">
         <h6 class="fw-bolder">Nuestro Objetivo</h6>
@@ -226,6 +321,7 @@
 
     <hr class="mt-3 mb-5">
 
+    <!-- Galeria -->
     <section class="section">
       <div class="container">
         <h6 class="fw-bolder mt-md-5">Galería</h6>
@@ -296,6 +392,7 @@
 
     <hr class="my-5">
 
+    <!-- Footer -->
     <section class="section fp-auto-height">
       <footer>
         <div class="container d-flex flex-column py-5">
@@ -323,9 +420,9 @@
   </div>
 
   <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.js" integrity="sha512-XnvEFIQIK4NvMki+6FYKTM7XdnsbDAqHB2KLXfgFkafRQBtKOkLZQYjf7ydXd8OfrAn8vWS68ESil4GHtpdqPQ==" crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
   <script src="js/fullpagejs_config.js"></script>
   <script src="js/app.js"></script>
