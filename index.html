@@ -78,10 +78,6 @@
                   Tu orden:
                 </div>
                 <ul id="orden-ul" class="list-group list-group-flush">
-                  <!-- <li class="list-group-item">
-                    Pizza Mozzarella
-                    <span class="ms-2 badge bg-dark rounded-pill">x2</span>
-                  </li> -->
                 </ul>
                 <div class="card-footer text-end">
                   Total: $ <span class="displayTotal"></span>
@@ -95,7 +91,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-success d-inline-block w-100" data-bs-toggle="modal" data-bs-target="#confirmarModal">
+          <button id="confirmarModal" class="btn btn-success d-inline-block w-100" data-bs-toggle="modal" data-bs-target="#confirmarModal">
             Confirmar pedido
           </button>
         </div>
@@ -219,7 +215,7 @@
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button id="pizza1" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Napolitana)">
+                <button id="pizza1" class="carrito-button btn btn-light w-100 mt-2 disabled" onclick="updateItem(Napolitana)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
@@ -240,7 +236,7 @@
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button id="pizza2" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Mozzarella)">
+                <button id="pizza2" class="btn btn-light w-100 mt-2 disabled" onclick="updateItem(Mozzarella)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
@@ -261,7 +257,7 @@
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button id="pizza3" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Calabresa)">
+                <button id="pizza3" class="btn btn-light w-100 mt-2 disabled" onclick="updateItem(Calabresa)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
@@ -282,7 +278,7 @@
                   <option value="2">2 (Dos unidades)</option>
                   <option value="3">3 (Tres unidades)</option>
                 </select>
-                <button id="pizza4" class="btn btn-success w-100 mt-2 disabled" onclick="updateItem(Pepperoni)">
+                <button id="pizza4" class="btn btn-light w-100 mt-2 disabled" onclick="updateItem(Pepperoni)">
                   <i class="bi bi-cart-plus"></i> Agregar al carrito
                 </button>
               </div>
